@@ -1,3 +1,15 @@
-hello_world:
-  module: hello
-  class: HelloWorld
+# hello_world:
+#   module: hello
+#   class: HelloWorld
+#
+toggle_light:
+  module: toggle
+  class: ToggleLight
+#
+# turn_off_printer_when_idle:
+#   module: printer_power_manager
+#   class: TurnOffWhenIdle
+
+living_room_smart_switch:
+  module: smart_switch
+  class: SmartSwitch
