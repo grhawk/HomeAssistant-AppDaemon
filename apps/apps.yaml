@@ -5,6 +5,8 @@
 toggle_light:
   module: toggle
   class: ToggleLight
+  light: light.nerd_room_desk_strip
+  switch: sensor.hue_switch_old_action
 #
 # turn_off_printer_when_idle:
 #   module: printer_power_manager
