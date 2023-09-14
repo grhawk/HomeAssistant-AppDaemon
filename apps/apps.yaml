@@ -15,3 +15,10 @@ toggle_light:
 living_room_smart_switch:
   module: smart_switch
   class: SmartSwitch
+  switch: switch.living_room_smart_switch
+  light:
+    - light.living_room_lamp
+
+test:
+  module: smart_switch_test
+  class: SmartSwitch
