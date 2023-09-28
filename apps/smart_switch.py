@@ -41,15 +41,21 @@ class SmartSwitch(hass.Hass):
                 self.night_scene("test")
         else:
             self.log(">>>>>>>>>>>>>Turning off lights<<<<<<<<<<<<<<<<<<<")
-            self.turn_off("light.living_room_light_paper_lamp")
+            self.turn_off("light.living_room_light")
 
     def day_scene(self, entities: list):
         self.log("day_scene")
-        self.turn_on("light.living_room_light_paper_lamp", brightness=255, color_temp=1, transition=2)
+        self.turn_on("light.living_room_light", brightness=1, color_temp=1, transition=0)
+        self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
+        self.log("end day_scene")
+
+    def turns_light_on_final(self, cb_args):
+        self.log("turns_light_on_final")
+        self.turn_on("light.living_room_light", brightness=cb_args['brightness'], transition=cb_args['transition'])
         self.log("end day_scene")
 
     def night_scene(self, entities: list):
         self.log("night_scene")
-        self.turn_on("light.living_room_light_paper_lamp", brightness=255, color_temp=500, transition=2)
+        self.turn_on("light.living_room_light", brightness=1, color_temp=500, transition=0)
+        self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
         self.log("end night_scene")
-
