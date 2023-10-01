@@ -1,20 +1,16 @@
 import time
 
-import pytest
 from requests import post
 from requests import get
 
-
-# This is the call I need to make from the test
-# curl -X POST http://localhost:8123/api/states/switch.virtual_switch_2 -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmZWVhNjc1YTZmOTY0YjNlYmRjNzBhMjIzMzVmMzVjZSIsImlhdCI6MTY5NDYyMTYwMCwiZXhwIjoyMDA5OTgxNjAwfQ.C1Fdiof3_r6d9vv0zuNb8CZr5BYhDuJV6PSH68vFXhA'  -d '{"state": "off"}'
 
 class HoassApi:
 
     def __init__(self):
         self.base_url = "http://localhost:8123/api/states/"
         self.headers = {
-          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmZWVhNjc1YTZmOTY0YjNlYmRjNzBhMjIzMzVmMzVjZSIsImlhdCI6MTY5NDYyMTYwMCwiZXhwIjoyMDA5OTgxNjAwfQ.C1Fdiof3_r6d9vv0zuNb8CZr5BYhDuJV6PSH68vFXhA",
-          "content-type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmZWVhNjc1YTZmOTY0YjNlYmRjNzBhMjIzMzVmMzVjZSIsImlhdCI6MTY5NDYyMTYwMCwiZXhwIjoyMDA5OTgxNjAwfQ.C1Fdiof3_r6d9vv0zuNb8CZr5BYhDuJV6PSH68vFXhA",
+            "content-type": "application/json",
         }
 
     def hass_get_entity(self, entity: str) -> dict:
@@ -27,8 +23,6 @@ class HoassApi:
         assert response['state'] == state
 
 
-
-
 def test_turn_on_off_switch():
     base_url = "http://localhost:8123/api/states/"
     headers = {
@@ -38,8 +32,6 @@ def test_turn_on_off_switch():
 
     light = 'light.virtual_light_1'
 
-    # initial_light_state = get(base_url + 'light.virtual_light_1', headers=headers)
-    # assert initial_light_state.status_code == 200
     HoassApi().assert_state_is(light, 'off')
     response = post(base_url + 'switch.virtual_switch_1', headers=headers, data='{"state": "on"}')
     assert response.status_code == 200

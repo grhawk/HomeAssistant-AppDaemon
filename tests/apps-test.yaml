@@ -1,0 +1,7 @@
+test_smart_switch:
+    module: smart_switch
+    class: SmartSwitch
+    switch: switch.virtual_switch_1
+    light:
+        - light.virtual_switch_1
+        - light.virtual_switch_2

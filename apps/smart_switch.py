@@ -11,7 +11,7 @@ class SmartSwitch(hass.Hass):
         self.log("SmartSwitch initialized")
         self.counter = 0
         self.handle = None
-        self.listen_state(self.switch_lights, self.args["switch"]])
+        self.listen_state(self.switch_lights, self.args["switch"])
         self.light = self.args["lights"][0]
         # self.listen_state(self.set_day_scene, "switch.living_room_switch_main")
 
