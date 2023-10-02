@@ -5,9 +5,9 @@
   "data": {
     "items": [
       {
-        "id": "appdaemontest",
-        "name": "appdaemontest",
-        "user_id": "7dc4b85be328472da15c523a68e3b189",
+        "id": "main_user",
+        "name": "Main User",
+        "user_id": "258bc3a2929e4a35ab3f3b74d6136926",
         "device_trackers": []
       }
     ]

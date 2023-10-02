@@ -34,6 +34,13 @@ class SmartSwitch(hass.Hass):
 
 
     def switch_lights(self, entity, attribute, old, new, kwargs):
+        self.log("switch_lights")
+        self.log("entity: " + entity)
+        self.log("attribute: " + attribute)
+        self.log("old: " + old)
+        self.log("new: " + new)
+        self.log("kwargs: " + str(kwargs))
+
         if new == "on":
             self.log(">>>>>>>>>>>>>Turning on lights<<<<<<<<<<<<<<<<<<<")
             if self.sun_up():
@@ -47,7 +54,7 @@ class SmartSwitch(hass.Hass):
     def day_scene(self, entities: list):
         self.log("day_scene")
         self.turn_on(self.light, brightness=1, color_temp=1, transition=0)
-        self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
+        #self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
         self.log("end day_scene")
 
     def turns_light_on_final(self, cb_args):
@@ -58,5 +65,5 @@ class SmartSwitch(hass.Hass):
     def night_scene(self, entities: list):
         self.log("night_scene")
         self.turn_on(self.light, brightness=1, color_temp=500, transition=0)
-        self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
+        #self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
         self.log("end night_scene")

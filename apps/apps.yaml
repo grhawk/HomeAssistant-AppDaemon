@@ -1,24 +1,7 @@
-# hello_world:
-#   module: hello
-#   class: HelloWorld
-#
-toggle_light:
-  module: toggle
-  class: ToggleLight
-  light: light.nerd_room_desk_strip
-  switch: sensor.hue_switch_old_action
-#
-# turn_off_printer_when_idle:
-#   module: printer_power_manager
-#   class: TurnOffWhenIdle
+test_smart_switch:
+    module: smart_switch
+    class: SmartSwitch
+    switch: switch.virtual_switch_1
+    lights:
+        - light.virtual_light_1
 
-living_room_smart_switch:
-  module: smart_switch
-  class: SmartSwitch
-  switch: switch.living_room_smart_switch
-  light:
-    - light.living_room_lamp
-
-test:
-  module: smart_switch_test
-  class: SmartSwitch

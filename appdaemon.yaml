@@ -6,11 +6,11 @@ appdaemon:
   plugins:
     HASS:
       type: hass
-      ha_url: "http://homeassistant:8123"
-      token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJmZWVhNjc1YTZmOTY0YjNlYmRjNzBhMjIzMzVmMzVjZSIsImlhdCI6MTY5NDYyMTYwMCwiZXhwIjoyMDA5OTgxNjAwfQ.C1Fdiof3_r6d9vv0zuNb8CZr5BYhDuJV6PSH68vFXhA"
+      ha_url: http://homeassistant:8123
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2YTk1NTM2MDJiMGQ0OWRlOGZiMjA1YTBmNDI2MmRjZiIsImlhdCI6MTY5NjQyNjQzNiwiZXhwIjoyMDExNzg2NDM2fQ.TKqIJhMn8pBoYH51STHwYN78qh1OOyIiYNv1MXNkFuU
       cert_verify: False
 http:
-  url: "http://localhost:5050"
+  url: http://localhost:5050
 admin:
 api:
 hadashboard:

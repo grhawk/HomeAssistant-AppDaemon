@@ -5,8 +5,12 @@
   "data": {
     "users": [
       {
-        "username": "appdaemontest",
-        "password": "JDJiJDEyJEdBblVnVHljSWNib09LakxGTnBsdGUzMWRvMjNXVWI3ZVJtTU9Qd01KbENSSUNZZlJTRnhx"
+        "username": "main",
+        "password": "JDJiJDEyJDVza2o0UjVEUXRaOTNqVjBpN0Mzcy40dXNKTlc3OERBT1RXRUkwRkNMdzBZZDgzLjZVV3dl"
+      },
+      {
+        "username": "appdaemon",
+        "password": "JDJiJDEyJFM5Vko1V0x1YzZZd2pjVEV3WXpTRy5MMXgucmdrT2Rqa2N1WER2UUNSYU14WEpKNm5nOXoy"
       }
     ]
   }

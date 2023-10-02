@@ -18,13 +18,6 @@
             "should_expose": false
           }
         }
-      },
-      "hello_state.world": {
-        "assistants": {
-          "conversation": {
-            "should_expose": false
-          }
-        }
       }
     }
   }
