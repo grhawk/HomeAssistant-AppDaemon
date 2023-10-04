@@ -2,7 +2,7 @@ import os
 import shutil
 from pathlib import Path
 from time import sleep
-
+import yaml
 import pytest
 from requests.exceptions import ConnectionError
 
@@ -62,5 +62,24 @@ def configure_home_assistant(request, project_dir):
         shutil.copy2(str(project_dir.joinpath(BACKUP_FILE_FORMAT % AD_APPS_PRODUCTION_FILE)),
                      str(project_dir.joinpath(AD_APPS_PRODUCTION_FILE)))
         os.remove(str(project_dir.joinpath(BACKUP_FILE_FORMAT % AD_APPS_PRODUCTION_FILE)))
+
+    request.addfinalizer(fin)
+
+
+@pytest.fixture(scope="module", autouse=True)
+def ensure_all_off_after_tests(request, hoass_api, project_dir):
+    def fin():
+        print('\nensure_all_off_after_tests()')
+        with open(project_dir.joinpath(AD_APPS_INTEGRATION_TEST_FILE), 'r') as stream:
+            apps_test = yaml.safe_load(stream)
+
+        all_entities = []
+        for _, _v in apps_test.items():
+            for k, v in _v.items():
+                if k == "switches" or k == "lights":
+                    all_entities += v
+
+        hoass_api.set_state_for_all(all_entities, 'off')
+        sleep(10)
 
     request.addfinalizer(fin)
