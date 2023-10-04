@@ -16,25 +16,8 @@ class SmartSwitch(hass.Hass, appdaemon.adapi.ADAPI):
     def initialize(self):
         self.log("SmartSwitch initialized")
         self.counter = 0
-        self.handles = [self.listen_state(self.switch_lights, i) for i in self.args["switch"]]
+        self.handles = [self.listen_state(self.switch_lights, i) for i in self.args["switches"]]
         self.entities = [self.get_entity(i) for i in self.args["lights"]]
-
-    # def set_day_scene(self, entity, attribute, old, new, kwargs):
-    #     self.log("set_day_scene")
-    #     delay = 2
-    #     self.log("Counter: " + str(self.counter))
-    #     if self.counter == 0:
-    #         self.log("Counter: " + str(self.counter))
-    #         self.counter += 1
-    #         self.handle = self.run_in(self.switch_lights(entity, attribute, old, new, kwargs), delay)
-    #         self.counter = 0
-    #     elif self.counter == 1:
-    #         self.cancel_timer(self.handle)
-    #         self.counter += 1
-    #         self.log("Counter: " + str(self.counter))
-    #         self.day_scene("test")
-    #         self.counter = 0
-    #     self.log("end set_day_scene")
 
     def switch_lights(self, entity, attribute, old, new, kwargs):
         if new == "on":
