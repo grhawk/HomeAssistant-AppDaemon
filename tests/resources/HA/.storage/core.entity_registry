@@ -464,6 +464,275 @@
         "translation_key": null,
         "unique_id": "cd3872c5058a47e77fa9c2c77405bc93",
         "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_single_click",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a004972236d87166fadd419cc4a4985a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_click",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "single_click",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_double_click",
+        "hidden_by": null,
+        "icon": null,
+        "id": "6fe51702cb3b022b3bcbb820c8980958",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "double_click",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "double_click",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "switch.virtual_single_double_switch",
+        "hidden_by": null,
+        "icon": null,
+        "id": "ba4cbb2ed90bb19e2304150b9a797877",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_double_switch",
+        "platform": "virtual",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "single_double_switch",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_single_click_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b80205cd6812fda4b7fac73be69bab4a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_click_1",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "single_click_1",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_single_click_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "6bc3a127bd179acd97328b163de6bb48",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_click_2",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "single_click_2",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_double_click_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b347e184613265a5bb0eecbd2b43b9ee",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "double_click_1",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "double_click_1",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_double_click_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f4d096e7aae229c80a5d368862474de3",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "double_click_2",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "double_click_2",
+        "unit_of_measurement": null
       }
     ],
     "deleted_entities": []

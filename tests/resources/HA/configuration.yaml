@@ -27,6 +27,11 @@ switch:
     initial_value: 'off'
     initial_availability: True
 
+  - platform: virtual
+    name: single_double_switch
+    initial_value: 'off'
+    initial_availability: True
+
 light:
   - platform: virtual
     name: 'Light 1'
@@ -43,6 +48,58 @@ light:
 
   - platform: virtual
     name: 'Light 2'
+    initial_value: 'off'
+    support_brightness: true
+    initial_brightness: 100
+    support_color: true
+    initial_color: [0,255]
+    support_color_temp: true
+    initial_color_temp: 255
+    support_white_value: true
+    initial_white_value: 240
+    initial_availability: true
+
+  - platform: virtual
+    name: 'single_click_1'
+    initial_value: 'off'
+    support_brightness: true
+    initial_brightness: 100
+    support_color: true
+    initial_color: [0,255]
+    support_color_temp: true
+    initial_color_temp: 255
+    support_white_value: true
+    initial_white_value: 240
+    initial_availability: true
+
+  - platform: virtual
+    name: 'single_click_2'
+    initial_value: 'off'
+    support_brightness: true
+    initial_brightness: 100
+    support_color: true
+    initial_color: [0,255]
+    support_color_temp: true
+    initial_color_temp: 255
+    support_white_value: true
+    initial_white_value: 240
+    initial_availability: true
+
+  - platform: virtual
+    name: 'double_click_1'
+    initial_value: 'off'
+    support_brightness: true
+    initial_brightness: 100
+    support_color: true
+    initial_color: [0,255]
+    support_color_temp: true
+    initial_color_temp: 255
+    support_white_value: true
+    initial_white_value: 240
+    initial_availability: true
+
+  - platform: virtual
+    name: 'double_click_2'
     initial_value: 'off'
     support_brightness: true
     initial_brightness: 100
