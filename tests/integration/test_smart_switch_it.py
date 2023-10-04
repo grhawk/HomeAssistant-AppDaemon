@@ -1,27 +1,38 @@
 import time
+from typing import List
 
 import pytest
 
-SWITCH = 'switch.virtual_switch_1'
+SWITCHES: List[str] = ['switch.virtual_switch_1', 'switch.virtual_switch_2']
 
 
 def test_turn_on_off_switch(hoass_api):
 
-    light = 'light.virtual_light_1'
-    hoass_api.assert_state_is(light, 'off')
-    #TODO: assert state of switch
+    lights: List[str] = ['light.virtual_light_1', 'light.virtual_light_2']
 
-    # Turn on light
-    hoass_api.assert_state_is(light, 'off')
-    hoass_api.set_state(SWITCH, "on")
+    hoass_api.set_state_for_all(lights, 'off')
+    hoass_api.set_state_for_all(SWITCHES, 'off')
+
+    # Turn on light from Switch 1
+    hoass_api.assert_state_is(lights, 'off')
+    hoass_api.set_state(SWITCHES[0], "on")
     time.sleep(1)
-    hoass_api.assert_state_is(light, 'on')
+    hoass_api.assert_state_is(lights, 'on')
 
     # Turn off light
-    hoass_api.set_state(SWITCH, "off")
+    hoass_api.set_state(SWITCHES[0], "off")
     time.sleep(1)
-    hoass_api.assert_state_is(light, 'off')
+    hoass_api.assert_state_is(lights, 'off')
 
+    # Turn on light from Switch 2
+    hoass_api.set_state(SWITCHES[1], "on")
+    time.sleep(1)
+    hoass_api.assert_state_is(lights, 'on')
+
+    # Turn off light
+    hoass_api.set_state(SWITCHES[1], "off")
+    time.sleep(1)
+    hoass_api.assert_state_is(lights, 'off')
 
 @pytest.mark.skip(reason="not implemented")
 def test_double_toggle(hoass_api):

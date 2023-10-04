@@ -1,8 +1,16 @@
 import time
+from typing import Coroutine, List
 
 import hassapi as hass
+import appdaemon.adapi
+from appdaemon.entity import Entity
 
-class SmartSwitch(hass.Hass):
+
+class SmartSwitch(hass.Hass, appdaemon.adapi.ADAPI):
+
+    handles: List[Coroutine]
+    counter: int
+    entities: List[Entity]
 
     def log(self, msg):
         super().log(__class__.__name__ + ": " + msg, level="INFO")
@@ -10,10 +18,8 @@ class SmartSwitch(hass.Hass):
     def initialize(self):
         self.log("SmartSwitch initialized")
         self.counter = 0
-        self.handle = None
-        self.listen_state(self.switch_lights, self.args["switch"])
-        self.light = self.args["lights"][0]
-        # self.listen_state(self.set_day_scene, "switch.living_room_switch_main")
+        self.handles = [self.listen_state(self.switch_lights, i) for i in self.args["switch"]]
+        self.entities = [self.get_entity(i) for i in self.args["lights"]]
 
     # def set_day_scene(self, entity, attribute, old, new, kwargs):
     #     self.log("set_day_scene")
@@ -49,21 +55,24 @@ class SmartSwitch(hass.Hass):
                 self.night_scene("test")
         else:
             self.log(">>>>>>>>>>>>>Turning off lights<<<<<<<<<<<<<<<<<<<")
-            self.turn_off(self.light)
+            for entity in self.entities:
+                entity.turn_off()
 
     def day_scene(self, entities: list):
         self.log("day_scene")
-        self.turn_on(self.light, brightness=1, color_temp=1, transition=0)
+        for entity in self.entities:
+            entity.turn_on(brightness=255, color_temp=1, transition=2)
         #self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
         self.log("end day_scene")
 
     def turns_light_on_final(self, cb_args):
         self.log("turns_light_on_final")
-        self.turn_on(self.light, brightness=cb_args['brightness'], transition=cb_args['transition'])
+        self.turn_on(self.lights, brightness=cb_args['brightness'], transition=cb_args['transition'])
         self.log("end day_scene")
 
     def night_scene(self, entities: list):
         self.log("night_scene")
-        self.turn_on(self.light, brightness=1, color_temp=500, transition=0)
+        for entity in self.entities:
+            entity.turn_on(brightness=255, color_temp=500, transition=2)
         #self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
         self.log("end night_scene")

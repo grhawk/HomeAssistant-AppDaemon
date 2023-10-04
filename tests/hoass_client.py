@@ -1,4 +1,5 @@
 from copy import deepcopy
+from typing import List
 
 from requests import get, post, Response, Session, Request
 
@@ -30,9 +31,15 @@ class HoassApi:
         assert response.status_code == 200
         return response.json()
 
-    def assert_state_is(self, entity: str, state: str):
-        response = self.hass_get_entity(entity)
-        assert response['state'] == state
+    def assert_state_is(self, entities: List[str], state: str):
+        for entity in entities:
+            response = self.hass_get_entity(entity)
+            assert response['state'] == state
+
+    def assert_state_is_not(self, entities: List[str], state: str):
+        for entity in entities:
+            response = self.hass_get_entity(entity)
+            assert response['state'] != state
 
     def set_state(self, entity: str, state: str):
         r: Request = deepcopy(self.request)
@@ -42,6 +49,10 @@ class HoassApi:
         response: Response = self.s.send(r.prepare())
         assert response.status_code == 200
         assert response.json()['state'] == state
+
+    def set_state_for_all(self, entities: List[str], state: str):
+        for entity in entities:
+            self.set_state(entity, state)
 
     def get_state(self, entity: str):
         entity_json = self.hass_get_entity(entity)
