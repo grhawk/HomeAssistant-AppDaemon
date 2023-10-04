@@ -1,0 +1,3 @@
+[submodule "tests/resources/HA/integration/hass-virtual"]
+	path = tests/resources/HA/integration/hass-virtual
+	url = git@github.com:grhawk/hass-virtual.git

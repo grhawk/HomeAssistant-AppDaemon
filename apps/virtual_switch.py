@@ -11,8 +11,7 @@ class SmartSwitch(hass.Hass):
         self.log("SmartSwitch initialized")
         self.counter = 0
         self.handle = None
-        self.listen_state(self.switch_lights, self.args["switch"])
-        self.light = self.args["lights"][0]
+        self.listen_state(self.switch_lights, "switch.virtual_switch_1")
         # self.listen_state(self.set_day_scene, "switch.living_room_switch_main")
 
     # def set_day_scene(self, entity, attribute, old, new, kwargs):
@@ -34,13 +33,6 @@ class SmartSwitch(hass.Hass):
 
 
     def switch_lights(self, entity, attribute, old, new, kwargs):
-        self.log("switch_lights")
-        self.log("entity: " + entity)
-        self.log("attribute: " + attribute)
-        self.log("old: " + old)
-        self.log("new: " + new)
-        self.log("kwargs: " + str(kwargs))
-
         if new == "on":
             self.log(">>>>>>>>>>>>>Turning on lights<<<<<<<<<<<<<<<<<<<")
             if self.sun_up():
@@ -49,21 +41,15 @@ class SmartSwitch(hass.Hass):
                 self.night_scene("test")
         else:
             self.log(">>>>>>>>>>>>>Turning off lights<<<<<<<<<<<<<<<<<<<")
-            self.turn_off(self.light)
+            self.turn_off("light.living_room_light_paper_lamp")
 
     def day_scene(self, entities: list):
         self.log("day_scene")
-        self.turn_on(self.light, brightness=1, color_temp=1, transition=0)
-        #self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
-        self.log("end day_scene")
-
-    def turns_light_on_final(self, cb_args):
-        self.log("turns_light_on_final")
-        self.turn_on(self.light, brightness=cb_args['brightness'], transition=cb_args['transition'])
+        self.turn_on("light.living_room_light_paper_lamp", brightness=255, color_temp=1, transition=2)
         self.log("end day_scene")
 
     def night_scene(self, entities: list):
         self.log("night_scene")
-        self.turn_on(self.light, brightness=1, color_temp=500, transition=0)
-        #self.run_in(self.turns_light_on_final, .2, brightness=255, transition=1)
+        self.turn_on("light.living_room_light_paper_lamp", brightness=255, color_temp=500, transition=2)
         self.log("end night_scene")
+

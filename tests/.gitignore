@@ -1,0 +1,4 @@
+# Do not track stateful files
+home-assistant.log*
+home-assistant_v2.db*
+resources/HA/.storage/core.restore_state

@@ -1,0 +1,34 @@
+services:
+  homeassistant:
+    container_name: homeassistant-integration-tests
+    image: ghcr.io/home-assistant/home-assistant:stable
+    environment:
+      - TZ=Europe/Berlin
+    ports:
+      - 8123:8123
+    volumes:
+      - ./tests/resources/HA:/config
+    healthcheck:
+        test: ["CMD", "curl", "-f", "http://localhost:8123"]
+        interval: 30s
+        timeout: 10s
+        retries: 30
+
+  appdaemon:
+    container_name: appdaemon-integration-tests
+    image: acockburn/appdaemon:latest
+    environment:
+      HA_URL: "http://homeassistant:8123"
+      TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2YTk1NTM2MDJiMGQ0OWRlOGZiMjA1YTBmNDI2MmRjZiIsImlhdCI6MTY5NjQyNjQzNiwiZXhwIjoyMDExNzg2NDM2fQ.TKqIJhMn8pBoYH51STHwYN78qh1OOyIiYNv1MXNkFuU
+      DASH_URL: "http://localhost:5050"
+    ports:
+      - 5050:5050
+    volumes:
+      - .:/conf
+    depends_on:
+        - homeassistant
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5050"]
+      interval: 30s
+      timeout: 10s
+      retries: 30

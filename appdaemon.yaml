@@ -1,0 +1,16 @@
+appdaemon:
+  latitude: 47.4245
+  longitude: 9.3767
+  elevation: 675
+  time_zone: Europe/Berlin
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://homeassistant:8123
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2YTk1NTM2MDJiMGQ0OWRlOGZiMjA1YTBmNDI2MmRjZiIsImlhdCI6MTY5NjQyNjQzNiwiZXhwIjoyMDExNzg2NDM2fQ.TKqIJhMn8pBoYH51STHwYN78qh1OOyIiYNv1MXNkFuU
+      cert_verify: False
+http:
+  url: http://localhost:5050
+admin:
+api:
+hadashboard:
