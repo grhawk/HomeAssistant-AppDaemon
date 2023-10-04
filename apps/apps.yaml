@@ -8,6 +8,11 @@ toggle_light:
 living_room_smart_switch:
   module: smart_switch
   class: SmartSwitch
+  switch:
+    - switch.living_room_smart_switch
+  lights:
+    - light.living_room_light
+    - light.living_room_light
 
 kitchen_smart_switch:
     module: smart_switch_single_double
