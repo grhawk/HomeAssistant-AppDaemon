@@ -1,7 +1,21 @@
 test_smart_switch:
     module: smart_switch
     class: SmartSwitch
-    switch: switch.virtual_switch_1
+    switches:
+      - switch.virtual_switch_1
+      - switch.virtual_switch_2
     lights:
-        - light.virtual_light_1
+      - light.virtual_light_1
+      - light.virtual_light_2
 
+test_double_click_switch:
+    module: smart_switch
+    class: SmartSwitch
+    switches:
+      - switch.virtual_single_double_switch
+    lights.single:
+      - light.virtual_single_click_1
+      - light.virtual_single_click_2
+    lights.double:
+      - light.virtual_double_click_1
+      - light.virtual_double_click_2
