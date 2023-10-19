@@ -9,7 +9,7 @@ living_room_smart_switch:
   module: smart_switch
   class: SmartSwitch
   switches:
-    - switch.living_room_smart_switch
+    - switch.living_room_switch_main
   lights:
     - light.living_room_light
 
