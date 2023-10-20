@@ -2,6 +2,8 @@ import os
 import shutil
 from pathlib import Path
 from time import sleep
+from typing import Any, Dict
+
 import yaml
 import pytest
 from requests.exceptions import ConnectionError
@@ -68,6 +70,19 @@ def configure_home_assistant(request, project_dir):
 
 @pytest.fixture(scope="module", autouse=True)
 def ensure_all_off_after_tests(request, hoass_api, project_dir):
+    print('\nensure_all_available_before_tests()')
+    with open(project_dir.joinpath(AD_APPS_INTEGRATION_TEST_FILE), 'r') as stream:
+        apps_test: Dict[str, Any] = yaml.safe_load(stream)
+
+    for _, _v in apps_test.items():
+        for k, v in _v.items():
+            if k == "switches" or k.startswith("light"):
+                for entity in v:
+                    hoass_api.set_active(entity)
+                    sleep(0.5)
+
+    sleep(10)
+
     def fin():
         print('\nensure_all_off_after_tests()')
         with open(project_dir.joinpath(AD_APPS_INTEGRATION_TEST_FILE), 'r') as stream:

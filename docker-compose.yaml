@@ -13,6 +13,7 @@ services:
         interval: 30s
         timeout: 10s
         retries: 30
+    stop_grace_period: 2m
 
   appdaemon:
     container_name: appdaemon-integration-tests

@@ -16,6 +16,7 @@ class HoassApi:
         self.endpoint_base: str = "http://" + address + ":" + str(port) + "/api/"
         self.request: Request = Request(headers=self.headers)
         self.endpoint_states = self.endpoint_base + "states/"
+        self.endpoint_services = self.endpoint_base + "services/"
 
     def status(self) -> Response:
         r: Request = deepcopy(self.request)
@@ -57,3 +58,11 @@ class HoassApi:
     def get_state(self, entity: str):
         entity_json = self.hass_get_entity(entity)
         return entity_json['state']
+
+    def set_active(self, entity):
+        r: Request = deepcopy(self.request)
+        r.method = "POST"
+        r.url = self.endpoint_services + "virtual/set_available"
+        r.data = '{"entity_id": "' + entity + '", "value": true}'
+        response: Response = self.s.send(r.prepare())
+        assert response.status_code == 200

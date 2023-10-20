@@ -51,9 +51,9 @@ class TestDoubleClick:
     def test_double_click_on(self, hoass_api, all_off):
         # Turn on light double click
         hoass_api.set_state(self.switch[0], "on")
-        time.sleep(0.3)
+        time.sleep(0.5)
         hoass_api.set_state(self.switch[0], "off")
-        time.sleep(1)
+        time.sleep(2)
         hoass_api.assert_state_is(self.lights_double_click, 'on')
         hoass_api.assert_state_is(self.lights_single_click, 'off')
 
