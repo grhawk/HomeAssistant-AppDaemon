@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {
+        "entity_id": "person.main_user",
+        "state": "unknown",
+        "attributes": {
+          "editable": true,
+          "id": "main_user",
+          "user_id": "258bc3a2929e4a35ab3f3b74d6136926",
+          "device_trackers": [],
+          "friendly_name": "Main User"
+        },
+        "last_changed": "2023-10-21T17:37:27.442527+00:00",
+        "last_updated": "2023-10-21T17:37:28.368483+00:00",
+        "context": {
+          "id": "01HD9N0E9GWCW1BVX9QWDXTG87",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:37:28.368685+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "input_boolean.notify_home",
+        "state": "off",
+        "attributes": {
+          "editable": false,
+          "icon": "mdi:car",
+          "friendly_name": "Notify when someone arrives home"
+        },
+        "last_changed": "2023-10-21T17:35:43.033344+00:00",
+        "last_updated": "2023-10-21T17:35:43.033344+00:00",
+        "context": {
+          "id": "01HD9MX7DSS5HFNA1VR1BF41VJ",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "light.virtual_light_1",
+        "state": "unavailable",
+        "attributes": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ],
+          "friendly_name": "Light 1",
+          "supported_features": 19
+        },
+        "last_changed": "2023-10-21T17:35:43.211925+00:00",
+        "last_updated": "2023-10-21T17:35:43.211925+00:00",
+        "context": {
+          "id": "01HD9MX7KB8DTYRM3NJ9RA8MWG",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "light.virtual_light_2",
+        "state": "unavailable",
+        "attributes": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ],
+          "friendly_name": "Light 2",
+          "supported_features": 19
+        },
+        "last_changed": "2023-10-21T17:35:43.212280+00:00",
+        "last_updated": "2023-10-21T17:35:43.212280+00:00",
+        "context": {
+          "id": "01HD9MX7KC4834FD6F7MYG56BG",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "light.virtual_single_click_1",
+        "state": "off",
+        "attributes": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ],
+          "persistent": true,
+          "available": true,
+          "brightness": 100,
+          "color_mode": "color_temp",
+          "color_temp": 255,
+          "hs_color": [
+            0,
+            255
+          ],
+          "friendly_name": "single_click_1",
+          "supported_features": 19
+        },
+        "last_changed": "2023-10-21T17:35:43.214235+00:00",
+        "last_updated": "2023-10-21T17:35:43.214235+00:00",
+        "context": {
+          "id": "01HD9MX7KEJC17N1C0FW2738EX",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "light.virtual_single_click_2",
+        "state": "off",
+        "attributes": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ],
+          "persistent": true,
+          "available": true,
+          "brightness": 100,
+          "color_mode": "color_temp",
+          "color_temp": 255,
+          "hs_color": [
+            0,
+            255
+          ],
+          "friendly_name": "single_click_2",
+          "supported_features": 19
+        },
+        "last_changed": "2023-10-21T17:35:43.214824+00:00",
+        "last_updated": "2023-10-21T17:35:43.214824+00:00",
+        "context": {
+          "id": "01HD9MX7KEF25ESYKV9K0EFXXG",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "light.virtual_double_click_1",
+        "state": "off",
+        "attributes": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ],
+          "persistent": true,
+          "available": true,
+          "brightness": 100,
+          "color_mode": "color_temp",
+          "color_temp": 255,
+          "hs_color": [
+            0,
+            255
+          ],
+          "friendly_name": "double_click_1",
+          "supported_features": 19
+        },
+        "last_changed": "2023-10-21T17:35:43.215300+00:00",
+        "last_updated": "2023-10-21T17:35:43.215300+00:00",
+        "context": {
+          "id": "01HD9MX7KFBNXC3KSBH487VZ35",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "light.virtual_double_click_2",
+        "state": "off",
+        "attributes": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ],
+          "persistent": true,
+          "available": true,
+          "brightness": 100,
+          "color_mode": "color_temp",
+          "color_temp": 255,
+          "hs_color": [
+            0,
+            255
+          ],
+          "friendly_name": "double_click_2",
+          "supported_features": 19
+        },
+        "last_changed": "2023-10-21T17:35:43.215739+00:00",
+        "last_updated": "2023-10-21T17:35:43.215739+00:00",
+        "context": {
+          "id": "01HD9MX7KFGWYEMND056P3VYKB",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "switch.virtual_switch_2",
+        "state": "unavailable",
+        "attributes": {
+          "friendly_name": "Switch 2"
+        },
+        "last_changed": "2023-10-21T17:35:43.216042+00:00",
+        "last_updated": "2023-10-21T17:35:43.216042+00:00",
+        "context": {
+          "id": "01HD9MX7KG693ASD0ZR45W0RKK",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "switch.virtual_switch_1",
+        "state": "unavailable",
+        "attributes": {
+          "friendly_name": "Switch 1"
+        },
+        "last_changed": "2023-10-21T17:35:43.216348+00:00",
+        "last_updated": "2023-10-21T17:35:43.216348+00:00",
+        "context": {
+          "id": "01HD9MX7KGH5DV00BCG21EE0V8",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "switch.virtual_single_double_switch",
+        "state": "unavailable",
+        "attributes": {
+          "friendly_name": "single_double_switch"
+        },
+        "last_changed": "2023-10-21T17:35:43.216533+00:00",
+        "last_updated": "2023-10-21T17:35:43.216533+00:00",
+        "context": {
+          "id": "01HD9MX7KGPAHW2THWYBHM1X8F",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    },
+    {
+      "state": {
+        "entity_id": "tts.google_en_com",
+        "state": "unknown",
+        "attributes": {
+          "friendly_name": "Google en com"
+        },
+        "last_changed": "2023-10-21T17:35:43.218062+00:00",
+        "last_updated": "2023-10-21T17:35:43.218062+00:00",
+        "context": {
+          "id": "01HD9MX7KJFX660MFJMD2S93WV",
+          "parent_id": null,
+          "user_id": null
+        }
+      },
+      "extra_data": null,
+      "last_seen": "2023-10-21T17:35:43.504256+00:00"
+    }
+  ]
+}
