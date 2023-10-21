@@ -22,3 +22,8 @@ kitchen_smart_switch:
     lights.single: []
     lights.double:
       - light.kitchen_light_table
+
+log_states:
+    module: log_states
+    class: LogStates
+    entity_id: "sensor.0x6c5cb1fffe9a591a_action"
