@@ -22,6 +22,9 @@ virtual:
 switch:
   - platform: virtual
     name: Switch 2
+    initial_value: 'off'
+    initial_availability: True
+
   - platform: virtual
     name: Switch 1
     initial_value: 'off'
