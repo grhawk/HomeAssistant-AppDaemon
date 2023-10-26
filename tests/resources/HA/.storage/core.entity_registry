@@ -1,0 +1,740 @@
+{
+  "version": 1,
+  "minor_version": 11,
+  "key": "core.entity_registry",
+  "data": {
+    "entities": [
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "input_boolean.notify_home",
+        "hidden_by": null,
+        "icon": null,
+        "id": "50137f4857d1361cf6bf8761ab782d0d",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:car",
+        "original_name": "Notify when someone arrives home",
+        "platform": "input_boolean",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "notify_home",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_light_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "3449ee1e631b862a6e6f7c3eacb72c93",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Light 1",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "light_1",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_light_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "7f8fd5d2d707ecfc283c11abcaf02d8c",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Light 2",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "light_2",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "switch.virtual_switch_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8b20d65906dcffcbb8310ef307d00806",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Switch 1",
+        "platform": "virtual",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "switch_1",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "switch.virtual_switch_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8aba53330bc40567577977f8861c940a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Switch 2",
+        "platform": "virtual",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "switch_2",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_next_dawn",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8b585580ec4747923de652b7ea7f2cee",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Next dawn",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_dawn",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-next_dawn",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_next_dusk",
+        "hidden_by": null,
+        "icon": null,
+        "id": "40a4236161a69244e9a2c2c3dcdf369c",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Next dusk",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_dusk",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-next_dusk",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_next_midnight",
+        "hidden_by": null,
+        "icon": null,
+        "id": "0babdf7afed0fd19fe0d6ea82bddc38d",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Next midnight",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_midnight",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-next_midnight",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_next_noon",
+        "hidden_by": null,
+        "icon": null,
+        "id": "76607607602d8d7b6bcf29195b7666cc",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Next noon",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_noon",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-next_noon",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_next_rising",
+        "hidden_by": null,
+        "icon": null,
+        "id": "6dfd7e82e332f85cd21e6344a7c5a868",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Next rising",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_rising",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-next_rising",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": null,
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_next_setting",
+        "hidden_by": null,
+        "icon": null,
+        "id": "1ea145208684e0a05d13bef8fc863f7c",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": "timestamp",
+        "original_icon": "mdi:sun-clock",
+        "original_name": "Next setting",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "next_setting",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-next_setting",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": "integration",
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_solar_elevation",
+        "hidden_by": null,
+        "icon": null,
+        "id": "4dd78ca3b814806fc8b5faac89a03a37",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:theme-light-dark",
+        "original_name": "Solar elevation",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "solar_elevation",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-solar_elevation",
+        "unit_of_measurement": "°"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "state_class": "measurement"
+        },
+        "config_entry_id": "b162efd0bbafa6a8bf2333a663ba9628",
+        "device_class": null,
+        "device_id": "b049db1d1690bda61fd0d6492719e0ad",
+        "disabled_by": "integration",
+        "entity_category": "diagnostic",
+        "entity_id": "sensor.sun_solar_azimuth",
+        "hidden_by": null,
+        "icon": null,
+        "id": "56a3b2d7cba5f4f5a247d827baf0d200",
+        "has_entity_name": true,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": "mdi:sun-angle",
+        "original_name": "Solar azimuth",
+        "platform": "sun",
+        "supported_features": 0,
+        "translation_key": "solar_azimuth",
+        "unique_id": "b162efd0bbafa6a8bf2333a663ba9628-solar_azimuth",
+        "unit_of_measurement": "°"
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "person.main_user",
+        "hidden_by": null,
+        "icon": null,
+        "id": "8c7cf99193cae4523973da796080f4d5",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Main User",
+        "platform": "person",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "main_user",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": "cd3872c5058a47e77fa9c2c77405bc93",
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "tts.google_en_com",
+        "hidden_by": null,
+        "icon": null,
+        "id": "d47d2649e8c1a090a0444ffa0da95a0a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": false
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "Google en com",
+        "platform": "google_translate",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "cd3872c5058a47e77fa9c2c77405bc93",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_single_click",
+        "hidden_by": null,
+        "icon": null,
+        "id": "a004972236d87166fadd419cc4a4985a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_click",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "single_click",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_double_click",
+        "hidden_by": null,
+        "icon": null,
+        "id": "6fe51702cb3b022b3bcbb820c8980958",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "double_click",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "double_click",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": null,
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "switch.virtual_single_double_switch",
+        "hidden_by": null,
+        "icon": null,
+        "id": "ba4cbb2ed90bb19e2304150b9a797877",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_double_switch",
+        "platform": "virtual",
+        "supported_features": 0,
+        "translation_key": null,
+        "unique_id": "single_double_switch",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_single_click_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b80205cd6812fda4b7fac73be69bab4a",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_click_1",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "single_click_1",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_single_click_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "6bc3a127bd179acd97328b163de6bb48",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "single_click_2",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "single_click_2",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_double_click_1",
+        "hidden_by": null,
+        "icon": null,
+        "id": "b347e184613265a5bb0eecbd2b43b9ee",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "double_click_1",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "double_click_1",
+        "unit_of_measurement": null
+      },
+      {
+        "aliases": [],
+        "area_id": null,
+        "capabilities": {
+          "min_color_temp_kelvin": 2000,
+          "max_color_temp_kelvin": 6535,
+          "min_mireds": 153,
+          "max_mireds": 500,
+          "supported_color_modes": [
+            "brightness",
+            "color_temp",
+            "hs",
+            "onoff"
+          ]
+        },
+        "config_entry_id": null,
+        "device_class": null,
+        "device_id": null,
+        "disabled_by": null,
+        "entity_category": null,
+        "entity_id": "light.virtual_double_click_2",
+        "hidden_by": null,
+        "icon": null,
+        "id": "f4d096e7aae229c80a5d368862474de3",
+        "has_entity_name": false,
+        "name": null,
+        "options": {
+          "conversation": {
+            "should_expose": true
+          }
+        },
+        "original_device_class": null,
+        "original_icon": null,
+        "original_name": "double_click_2",
+        "platform": "virtual",
+        "supported_features": 19,
+        "translation_key": null,
+        "unique_id": "double_click_2",
+        "unit_of_measurement": null
+      }
+    ],
+    "deleted_entities": []
+  }
+}
