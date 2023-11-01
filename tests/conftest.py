@@ -45,11 +45,11 @@ def hoass_api(docker_ip, docker_services, configure_home_assistant):
     docker_services.wait_until_responsive(
         timeout=120.0, pause=1, check=lambda: is_responsive(hoass_service)
     )
-    sleep(15)
+    sleep(30)
     return hoass_service
 
 
-@pytest.fixture(scope="session", autouse=False)
+@pytest.fixture(scope="session", autouse=True)
 def configure_home_assistant(request, project_dir):
     print('\nconfigure_HA()')
     print('\nconfigure apps.yaml')
@@ -68,33 +68,15 @@ def configure_home_assistant(request, project_dir):
     request.addfinalizer(fin)
 
 
-@pytest.fixture(scope="module", autouse=True)
-def ensure_all_off_after_tests(request, hoass_api, project_dir):
-    print('\nensure_all_available_before_tests()')
-    with open(project_dir.joinpath(AD_APPS_INTEGRATION_TEST_FILE), 'r') as stream:
-        apps_test: Dict[str, Any] = yaml.safe_load(stream)
-
-    for _, _v in apps_test.items():
-        for k, v in _v.items():
-            if k == "switches" or k.startswith("light"):
-                for entity in v:
-                    hoass_api.set_active(entity)
-                    sleep(0.5)
-
-    sleep(10)
-
-    def fin():
-        print('\nensure_all_off_after_tests()')
-        with open(project_dir.joinpath(AD_APPS_INTEGRATION_TEST_FILE), 'r') as stream:
-            apps_test = yaml.safe_load(stream)
-
-        all_entities = []
-        for _, _v in apps_test.items():
-            for k, v in _v.items():
-                if k == "switches" or k == "lights":
-                    all_entities += v
-
-        hoass_api.set_state_for_all(all_entities, 'off')
-        sleep(10)
-
-    request.addfinalizer(fin)
+# @pytest.fixture(scope="module", autouse=True)
+# def ensure_all_off_after_tests(hoass_api, project_dir):
+#     print('\nensure_all_available_before_tests()')
+#     with open(project_dir.joinpath(AD_APPS_INTEGRATION_TEST_FILE), 'r') as stream:
+#         apps_test: Dict[str, Any] = yaml.safe_load(stream)
+#
+#     for _, _v in apps_test.items():
+#         for k, v in _v.items():
+#             if k == "switches" or k.startswith("light"):
+#                 for entity in v:
+#                     hoass_api.call_service(entity, "off")
+#     sleep(10)

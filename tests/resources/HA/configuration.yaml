@@ -1,7 +1,9 @@
 
 # Loads default set of integrations. Do not remove.
 #default_config:
-
+logbook:
+logger:
+  default: debug
 # Load frontend themes from the themes folder
 frontend:
   themes: !include_dir_merge_named themes
@@ -31,7 +33,7 @@ switch:
     initial_availability: True
 
   - platform: virtual
-    name: single_double_switch
+    name: Switch Single-Double
     initial_value: 'off'
     initial_availability: True
 

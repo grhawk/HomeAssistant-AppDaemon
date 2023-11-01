@@ -10,7 +10,8 @@ class TestSmartSwitchSingleDoubleUt:
         SmartSwitchSingleDouble,
         args={'switches': ['switch.smart_sd'],
               'lights.single': ['light.single_1', 'light.single_2'],
-              'lights.double': ['light.double_1', 'light.double_2']}
+              'lights.double': ['light.double_1', 'light.double_2'],
+              'delay': 0.8}
                         )
     def automation(self) -> SmartSwitchSingleDouble:
         # Provides the automation using the fixture

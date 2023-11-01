@@ -1,3 +1,4 @@
+import time
 from copy import deepcopy
 from typing import List
 
@@ -42,18 +43,22 @@ class HoassApi:
             response = self.hass_get_entity(entity)
             assert response['state'] != state
 
-    def set_state(self, entity: str, state: str):
+    def call_service(self, entity: str, service: str):
+        domain: str = entity.split('.')[0]
+        if service == "on" or service == "off":
+            service = "turn_" + service
         r: Request = deepcopy(self.request)
         r.method = "POST"
-        r.url = self.endpoint_states + entity
-        r.data = '{"state": "' + state + '"}'
+        r.url = self.endpoint_services + domain + '/' + service
+        r.data = '{"entity_id": "' + entity + '"}'
         response: Response = self.s.send(r.prepare())
         assert response.status_code == 200
-        assert response.json()['state'] == state
 
-    def set_state_for_all(self, entities: List[str], state: str):
+    def call_service_for_all(self, entities: List[str], service: str):
         for entity in entities:
-            self.set_state(entity, state)
+            self.call_service(entity, service)
+
+
 
     def get_state(self, entity: str):
         entity_json = self.hass_get_entity(entity)

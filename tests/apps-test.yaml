@@ -9,10 +9,11 @@ test_smart_switch:
       - light.virtual_light_2
 
 test_double_click_switch:
-    module: smart_switch
-    class: SmartSwitch
+    module: smart_switch_single_double
+    class: SmartSwitchSingleDouble
+    delay: 1
     switches:
-      - switch.virtual_single_double_switch
+      - switch.virtual_switch_single_double
     lights.single:
       - light.virtual_single_click_1
       - light.virtual_single_click_2
