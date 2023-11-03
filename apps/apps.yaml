@@ -19,7 +19,8 @@ kitchen_smart_switch:
     delay: 0.8
     switches:
       - switch.kitchen_switch_main
-    lights.single: []
+    lights.single:
+      - light.kitchen_light_main
     lights.double:
       - light.kitchen_light_table
 
