@@ -11,6 +11,9 @@ NEUTRAL = 370
 WARM = 454
 WARMEST = 500
 
+DARKEST = 5
+BRIGHTEST = 255
+
 TEMPERATURES = [COOLEST, COOL, NEUTRAL, WARM, WARMEST]
 
 
@@ -75,11 +78,18 @@ class ToggleLight(hass.Hass):
         self.log("Action: " + str(action) + " - Counter: " + str(self.counter))
 
     def _call_hold(self, status):
-        dimming_interval = int(self.dimming_interval * 1.5)
         if status == "up_hold":
-            self._call_up(dimming_interval)
+            self._set_brightest()
         elif status == "down_hold":
-            self._call_down(dimming_interval)
+            self._set_darkest()
+
+    def _set_brightest(self):
+        self.log("brightest --> br: " + str(self.br))
+        self.light.turn_on(brightness=BRIGHTEST, transition=self.dimming_transition)
+
+    def _set_darkest(self):
+        self.log("darkest --> br: " + str(self.br))
+        self.light.turn_on(brightness=DARKEST, transition=self.dimming_transition)
 
     def _call_up(self, dimming_interval):
         self.log("up --> br: " + str(self.br))
