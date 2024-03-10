@@ -58,7 +58,7 @@ class SmartSwitch(hass.Hass, appdaemon.adapi.ADAPI):
     def _day_scene(self):
         self.log("day_scene")
         for entity in self.entities:
-            entity.turn_on(brightness=255, color_temp=1, transition=self.transition_time)
+            entity.turn_on(brightness=255, color_temp=450, transition=self.transition_time)
         self.log("end day_scene")
 
     def _night_scene(self):
