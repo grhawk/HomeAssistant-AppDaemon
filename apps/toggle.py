@@ -16,6 +16,7 @@ BRIGHTEST = 255
 
 TEMPERATURES = [COOLEST, COOL, NEUTRAL, WARM, WARMEST]
 
+debug = False
 
 def _get_next_temperature(actual_temp, param):
     if actual_temp in TEMPERATURES:
@@ -35,7 +36,7 @@ class ToggleLight(hass.Hass):
         self.dimming_transition = 1.5
 
     def toggle_light(self, entity, attribute, old, new, kwargs):
-        if __debug__:
+        if debug:
             self.log("--------------------EVENT-------------------")
             self.log("entity: " + entity)
             self.log("attribute: " + attribute)
