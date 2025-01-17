@@ -16,13 +16,13 @@ class LogStates(hass.Hass, appdaemon.adapi.ADAPI):
 
     def log_state(self, entity, attribute, old, new, kwargs):
         self.log("---------------------------------------------")
-        self.log(">>>>>>>>>>>>>State changed<<<<<<<<<<<<<<<<<<<")
-        self.log("Entity: " + entity)
-        self.log("old #" + old + "#")
-        self.log("new #" + new + "#")
-        self.log("kwargs: " + str(kwargs))
-        self.log("attribute: " + str(attribute))
         self.log(">>>>>>>>>>>State changed end<<<<<<<<<<<<<<<<<")
+        self.log("attribute: " + str(attribute))
+        self.log("kwargs: " + str(kwargs))
+        self.log("new #" + new + "#")
+        self.log("old #" + old + "#")
+        self.log("Entity: " + entity)
+        self.log(">>>>>>>>>>>>>State changed<<<<<<<<<<<<<<<<<<<")
         self.log("---------------------------------------------")
 
 
