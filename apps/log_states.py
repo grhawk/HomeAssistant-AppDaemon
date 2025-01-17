@@ -12,7 +12,7 @@ class LogStates(hass.Hass, appdaemon.adapi.ADAPI):
 
     def initialize(self):
         self.log("LogStates initialized")
-        self.handle = self.listen_state(self.log_state, self.args["entity_id"])
+        self.handle = [self.listen_state(self.log_state, i) for i in self.args["entities_id"]]
 
     def log_state(self, entity, attribute, old, new, kwargs):
         self.log("---------------------------------------------")

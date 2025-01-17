@@ -27,4 +27,9 @@ kitchen_smart_switch:
 log_states:
     module: log_states
     class: LogStates
-    entity_id: "sensor.0x6c5cb1fffe9a591a_action"
+    entities_id:
+      - "sensor.0x6c5cb1fffe9a591a_action"
+      - "select.0x6c5cb1fffe9a591a_operation_mode"
+      - "sensor.0x6c5cb1fffe9a591a_action_rate"
+      - "sensor.0x6c5cb1fffe9a591a_action_step_size"
+      - "sensor.0x6c5cb1fffe9a591a_action_transition_time"
