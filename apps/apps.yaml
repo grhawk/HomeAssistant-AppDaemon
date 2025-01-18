@@ -28,8 +28,8 @@ log_states:
     module: log_states
     class: LogStates
     entities_id:
-      - "sensor.0x6c5cb1fffe9a591a_action"
-      - "select.0x6c5cb1fffe9a591a_operation_mode"
-      - "sensor.0x6c5cb1fffe9a591a_action_rate"
-      - "sensor.0x6c5cb1fffe9a591a_action_step_size"
-      - "sensor.0x6c5cb1fffe9a591a_action_transition_time"
+      - "sensor.entrance_switch_rotatory_action"
+      - "select.entrance_switch_rotatory_operation_mode"
+      - "sensor.entrance_switch_rotatory_action_rate"
+      - "sensor.entrance_switch_rotatory_action_step_size"
+      - "sensor.entrance_switch_rotatory_action_transition_time"
