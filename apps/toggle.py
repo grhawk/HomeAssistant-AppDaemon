@@ -1,8 +1,6 @@
 import hassapi as hass
 
 #
-# Hello World App
-#
 # Args:
 #
 COOLEST = 150
