@@ -17,7 +17,7 @@ class LogStates(hass.Hass, appdaemon.adapi.ADAPI):
     def log_state(self, entity, attribute, old, new, kwargs):
         self.log("---------------------------------------------")
         self.log(">>>>>>>>>>>State changed end<<<<<<<<<<<<<<<<<")
-        self.log("state: " + str(self.get_entity(entity).get_state(entity)))
+        self.log("state: " + str(self.get_state(entity)))
         self.log("attribute: " + str(attribute))
         self.log("kwargs: " + str(kwargs))
         self.log("new #" + new + "#")
