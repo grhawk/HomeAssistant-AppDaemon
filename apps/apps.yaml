@@ -33,3 +33,14 @@ log_states:
       - "sensor.entrance_switch_rotatory_action_rate"
       - "sensor.entrance_switch_rotatory_action_step_size"
       - "sensor.entrance_switch_rotatory_action_transition_time"
+
+entrance_rotary_sensor:
+  module: rotary_smart_switch
+  class: RotarySmartSwitch
+  rotary_switches:
+    - action: "sensor.entrance_switch_rotatory_action"
+      operation_mode: "select.entrance_switch_rotatory_operation_mode"
+      action_rate: "sensor.entrance_switch_rotatory_action_rate"
+      step_size: "sensor.entrance_switch_rotatory_action_step_size"
+      action_transition_time: "sensor.entrance_switch_rotatory_action_transition_time"
+  light: "light.living_room_light"
