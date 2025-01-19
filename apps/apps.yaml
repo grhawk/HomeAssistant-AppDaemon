@@ -24,15 +24,15 @@ kitchen_smart_switch:
     lights.double:
       - light.kitchen_light_table
 
-log_states:
-    module: log_states
-    class: LogStates
-    entities_id:
-      - "sensor.entrance_switch_rotatory_action"
-      - "select.entrance_switch_rotatory_operation_mode"
-      - "sensor.entrance_switch_rotatory_action_rate"
-      - "sensor.entrance_switch_rotatory_action_step_size"
-      - "sensor.entrance_switch_rotatory_action_transition_time"
+#log_states:
+#    module: log_states
+#    class: LogStates
+#    entities_id:
+#      - "sensor.entrance_switch_rotatory_action"
+#      - "select.entrance_switch_rotatory_operation_mode"
+#      - "sensor.entrance_switch_rotatory_action_rate"
+#      - "sensor.entrance_switch_rotatory_action_step_size"
+#      - "sensor.entrance_switch_rotatory_action_transition_time"
 
 entrance_rotary_sensor:
   module: rotary_smart_switch
@@ -43,4 +43,4 @@ entrance_rotary_sensor:
       action_rate: "sensor.entrance_switch_rotatory_action_rate"
       step_size: "sensor.entrance_switch_rotatory_action_step_size"
       action_transition_time: "sensor.entrance_switch_rotatory_action_transition_time"
-  light: "light.living_room_light"
+  light: "light.entrance_light_table_lamp"

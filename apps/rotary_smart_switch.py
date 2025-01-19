@@ -1,14 +1,15 @@
-from typing import Coroutine
+from typing import Coroutine, List
 
-from appdaemon import appdaemon
-from appdaemon.plugins import hass
+import appdaemon.adapi
+import hassapi as hass
 
 
 class RotarySmartSwitch(hass.Hass, appdaemon.adapi.ADAPI):
-    handle: Coroutine
+    handles_toggle: List[Coroutine] = []
 
     def initialize(self):
-        handle_toggle = self.listen_state(self.toggle_callback, self.args["rotary_switches"]["action"], new="toggle")
+        for rotary_switch in self.args["rotary_switches"]:
+            self.handles_toggle.append(self.listen_state(self.toggle_callback, rotary_switch["action"], new="toggle"))
 
     def toggle_callback(self, entity, attribute, old, new, kwargs):
         self.toggle(self.args["light"])
