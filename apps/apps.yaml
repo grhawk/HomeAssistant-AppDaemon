@@ -44,3 +44,4 @@ entrance_rotary_sensor:
       step_size: "sensor.entrance_switch_rotatory_action_step_size"
       action_transition_time: "sensor.entrance_switch_rotatory_action_transition_time"
   light: "light.entrance_light_table_lamp"
+  light_hold: "light.all_light" # Toggle all lights of the house
